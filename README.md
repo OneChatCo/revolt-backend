@@ -53,9 +53,9 @@ cp crates/core/config/Revolt.toml Revolt.toml
 docker compose up -d
 
 # run the API server
-cargo run --bin revolt-delta
+cargo run --bin onechatsocial-delta
 # run the events server
-cargo run --bin revolt-bonfire
+cargo run --bin onechatsocial-bonfire
 
 # hint:
 # mold -run <cargo build, cargo run, etc...>
