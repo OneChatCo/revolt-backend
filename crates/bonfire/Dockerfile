@@ -1,5 +1,5 @@
 # Build Stage
-FROM ghcr.io/onechatsocial/base:latest AS builder
+FROM ghcr.io/onechatco/base:latest AS builder
 
 # Bundle Stage
 FROM debian:bullseye-slim
@@ -9,3 +9,4 @@ RUN apt-get update && \
 COPY --from=builder /home/rust/src/target/release/onechatsocial-bonfire ./
 EXPOSE 9000
 CMD ["./onechatsocial-bonfire"]
+

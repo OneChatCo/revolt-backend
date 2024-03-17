@@ -1,5 +1,3 @@
-set shell := ["powershell.exe", "-c"]
-
 publish:
     cargo publish --package onechatsocial-config
     cargo publish --package onechatsocial-result

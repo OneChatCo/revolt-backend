@@ -1,5 +1,5 @@
 # Build Stage
-FROM ghcr.io/onechatsocial/base:latest AS builder
+FROM ghcr.io/onechatco/base:latest AS builder
 
 # Bundle Stage
 FROM debian:bullseye-slim

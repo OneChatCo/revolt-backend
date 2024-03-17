@@ -55,7 +55,7 @@ services:
       "
   # File server (autumn)
   autumn:
-    image: ghcr.io/onechatsocial/autumn:1.1.5
+    image: ghcr.io/onechatco/autumn:1.1.5
     env_file: .env
     depends_on:
       - database
@@ -68,7 +68,7 @@ services:
 
   # Metadata and image proxy (january)
   january:
-    image: ghcr.io/onechatsocial/january:0.3.4
+    image: ghcr.io/onechatco/january:0.3.4
     ports:
       - "7000:7000"
     restart: always
