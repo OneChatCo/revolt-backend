@@ -1,5 +1,5 @@
 use authifier::AuthifierEvent;
-use revolt_models::v0::{FieldsWebhook, PartialWebhook, Webhook};
+use onechatsocial_models::v0::{FieldsWebhook, PartialWebhook, Webhook};
 use serde::{Deserialize, Serialize};
 
 use crate::models::channel::{FieldsChannel, PartialChannel};

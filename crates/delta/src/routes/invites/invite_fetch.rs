@@ -1,5 +1,5 @@
-use revolt_quark::models::{Channel, File, Invite};
-use revolt_quark::{Db, Ref, Result};
+use onechatsocial_quark::models::{Channel, File, Invite};
+use onechatsocial_quark::{Db, Ref, Result};
 
 use rocket::serde::json::Json;
 use serde::Serialize;

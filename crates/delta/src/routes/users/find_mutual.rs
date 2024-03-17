@@ -1,5 +1,5 @@
-use revolt_quark::models::User;
-use revolt_quark::{perms, Database, Error, Ref, Result};
+use onechatsocial_quark::models::User;
+use onechatsocial_quark::{perms, Database, Error, Ref, Result};
 
 use rocket::serde::json::Json;
 use rocket::State;

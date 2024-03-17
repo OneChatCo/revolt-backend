@@ -10,7 +10,7 @@ use crate::{
     perms, Database, Permission, Result,
 };
 
-use revolt_presence::filter_online;
+use onechatsocial_presence::filter_online;
 
 use super::{
     client::EventV1,

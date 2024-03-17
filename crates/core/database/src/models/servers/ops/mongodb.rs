@@ -1,6 +1,6 @@
 use bson::{to_document, Document};
 use futures::StreamExt;
-use revolt_result::Result;
+use onechatsocial_result::Result;
 
 use crate::{FieldsRole, FieldsServer, PartialRole, PartialServer, Role, Server};
 use crate::{IntoDocumentPath, MongoDb};

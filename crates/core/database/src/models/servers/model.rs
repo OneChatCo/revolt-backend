@@ -1,8 +1,8 @@
 use std::collections::{HashMap, HashSet};
 
-use revolt_models::v0::{self, DataCreateServerChannel};
-use revolt_permissions::{OverrideField, DEFAULT_PERMISSION_SERVER};
-use revolt_result::Result;
+use onechatsocial_models::v0::{self, DataCreateServerChannel};
+use onechatsocial_permissions::{OverrideField, DEFAULT_PERMISSION_SERVER};
+use onechatsocial_result::Result;
 use ulid::Ulid;
 
 use crate::{events::client::EventV1, Channel, Database, File, User};
@@ -425,7 +425,7 @@ impl SystemMessageChannels {
 
 #[cfg(test)]
 mod tests {
-    use revolt_permissions::{calculate_server_permissions, ChannelPermission};
+    use onechatsocial_permissions::{calculate_server_permissions, ChannelPermission};
 
     use crate::{fixture, util::permissions::DatabasePermissionQuery};
 

@@ -1,4 +1,4 @@
-use revolt_quark::{
+use onechatsocial_quark::{
     models::{server::Role, User},
     perms, Db, Error, Permission, Ref, Result, variables::delta::MAX_ROLE_COUNT,
 };

@@ -1,6 +1,6 @@
-use revolt_database::{Database, Member, Server, User};
-use revolt_models::v0;
-use revolt_result::{create_error, Result};
+use onechatsocial_database::{Database, Member, Server, User};
+use onechatsocial_models::v0;
+use onechatsocial_result::{create_error, Result};
 
 use rocket::serde::json::Json;
 use rocket::State;

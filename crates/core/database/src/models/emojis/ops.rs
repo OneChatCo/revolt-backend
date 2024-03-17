@@ -1,4 +1,4 @@
-use revolt_result::Result;
+use onechatsocial_result::Result;
 
 use crate::Emoji;
 

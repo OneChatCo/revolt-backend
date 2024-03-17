@@ -1,7 +1,7 @@
 use std::env;
 
 use async_std::net::TcpListener;
-use revolt_presence::clear_region;
+use onechatsocial_presence::clear_region;
 
 #[macro_use]
 extern crate log;
@@ -14,7 +14,7 @@ mod websocket;
 #[async_std::main]
 async fn main() {
     // Configure requirements for Bonfire.
-    revolt_quark::configure!();
+    onechatsocial_quark::configure!();
     database::connect().await;
 
     // Clean up the current region information.

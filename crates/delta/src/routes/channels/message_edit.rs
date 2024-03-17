@@ -1,4 +1,4 @@
-use revolt_quark::{
+use onechatsocial_quark::{
     models::message::{PartialMessage, SendableEmbed},
     models::{Message, User},
     perms,
@@ -100,7 +100,7 @@ pub async fn req(
         .await?
     {
         if let Some(content) = edit.content {
-            revolt_quark::tasks::process_embeds::queue(
+            onechatsocial_quark::tasks::process_embeds::queue(
                 message.channel.to_string(),
                 message.id.to_string(),
                 content,

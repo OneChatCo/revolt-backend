@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-use revolt_database::util::idempotency::IdempotencyKey;
+use onechatsocial_database::util::idempotency::IdempotencyKey;
 use ulid::Ulid;
 
 use crate::{

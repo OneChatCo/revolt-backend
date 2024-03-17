@@ -4,8 +4,8 @@ use crate::{events::client::EventV1, Database, File, RatelimitEvent};
 
 use once_cell::sync::Lazy;
 use rand::seq::SliceRandom;
-use revolt_config::config;
-use revolt_result::{create_error, Error, ErrorType, Result};
+use onechatsocial_config::config;
+use onechatsocial_result::{create_error, Error, ErrorType, Result};
 use ulid::Ulid;
 
 auto_derived_partial!(

@@ -1,5 +1,5 @@
 [package]
-name = "revolt-database"
+name = "onechatsocial-database"
 version = "0.6.13"
 edition = "2021"
 license = "AGPL-3.0-or-later"
@@ -16,18 +16,18 @@ mongodb = ["dep:mongodb", "bson"]
 tasks = ["isahc", "linkify", "url-escape"]
 async-std-runtime = ["async-std"]
 rocket-impl = ["rocket", "schemars", "revolt_okapi", "revolt_rocket_okapi"]
-redis-is-patched = ["revolt-presence/redis-is-patched"]
+redis-is-patched = ["onechatsocial-presence/redis-is-patched"]
 
 # Default Features
 default = ["mongodb", "async-std-runtime", "tasks"]
 
 [dependencies]
 # Core
-revolt-config = { version = "0.6.13", path = "../config" }
-revolt-result = { version = "0.6.13", path = "../result" }
-revolt-models = { version = "0.6.13", path = "../models" }
-revolt-presence = { version = "0.6.13", path = "../presence" }
-revolt-permissions = { version = "0.6.13", path = "../permissions", features = [
+onechatsocial-config = { version = "0.6.13", path = "../config" }
+onechatsocial-result = { version = "0.6.13", path = "../result" }
+onechatsocial-models = { version = "0.6.13", path = "../models" }
+onechatsocial-presence = { version = "0.6.13", path = "../presence" }
+onechatsocial-permissions = { version = "0.6.13", path = "../permissions", features = [
     "serde",
     "bson",
 ] }
@@ -58,7 +58,7 @@ redis-kiss = { version = "0.1.4" }
 
 # Database
 bson = { optional = true, version = "2.1.0" }
-mongodb = { optional = true, version = "2.1.0", default-features = false }
+mongodb = { optional = true, version = "2.1.0", default-features = false, features = ["openssl-tls"] }
 
 # Database Migration
 unicode-segmentation = "1.10.1"

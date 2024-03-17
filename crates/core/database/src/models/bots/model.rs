@@ -1,5 +1,5 @@
-use revolt_config::config;
-use revolt_result::Result;
+use onechatsocial_config::config;
+use onechatsocial_result::Result;
 use ulid::Ulid;
 
 use crate::{BotInformation, Database, PartialUser, User};

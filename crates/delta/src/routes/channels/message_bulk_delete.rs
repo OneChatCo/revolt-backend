@@ -1,5 +1,5 @@
 use chrono::Utc;
-use revolt_quark::{
+use onechatsocial_quark::{
     models::{Message, User},
     perms, Db, EmptyResponse, Error, Permission, Ref, Result,
 };

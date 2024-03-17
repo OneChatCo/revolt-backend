@@ -1,9 +1,9 @@
 use std::collections::HashMap;
 
-use revolt_config::config;
-use revolt_models::v0::{self, MessageAuthor};
-use revolt_permissions::OverrideField;
-use revolt_result::Result;
+use onechatsocial_config::config;
+use onechatsocial_models::v0::{self, MessageAuthor};
+use onechatsocial_permissions::OverrideField;
+use onechatsocial_result::Result;
 use serde::{Deserialize, Serialize};
 
 use crate::{
@@ -691,7 +691,7 @@ impl IntoDocumentPath for FieldsChannel {
 
 #[cfg(test)]
 mod tests {
-    use revolt_permissions::{calculate_channel_permissions, ChannelPermission};
+    use onechatsocial_permissions::{calculate_channel_permissions, ChannelPermission};
 
     use crate::{fixture, util::permissions::DatabasePermissionQuery};
 

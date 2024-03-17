@@ -59,6 +59,6 @@ impl revolt_rocket_okapi::response::OpenApiResponderInner for CachedFile {
 pub async fn req(target: String) -> CachedFile {
     CachedFile((
         ContentType::PNG,
-        revolt_quark::util::pfp::avatar(target.chars().last().unwrap()),
+        onechatsocial_quark::util::pfp::avatar(target.chars().last().unwrap()),
     ))
 }

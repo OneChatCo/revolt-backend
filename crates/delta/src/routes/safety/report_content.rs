@@ -1,8 +1,8 @@
-use revolt_quark::events::client::EventV1;
-use revolt_quark::models::report::{ReportStatus, ReportedContent};
-use revolt_quark::models::snapshot::{Snapshot, SnapshotContent};
-use revolt_quark::models::{Report, User};
-use revolt_quark::{Db, Error, Result};
+use onechatsocial_quark::events::client::EventV1;
+use onechatsocial_quark::models::report::{ReportStatus, ReportedContent};
+use onechatsocial_quark::models::snapshot::{Snapshot, SnapshotContent};
+use onechatsocial_quark::models::{Report, User};
+use onechatsocial_quark::{Db, Error, Result};
 use serde::Deserialize;
 use ulid::Ulid;
 use validator::Validate;

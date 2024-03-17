@@ -1,5 +1,5 @@
 [package]
-name = "revolt-delta"
+name = "onechatsocial-delta"
 version = "0.6.13"
 license = "AGPL-3.0-or-later"
 authors = ["Paul Makles <paulmakles@gmail.com>"]
@@ -65,18 +65,18 @@ schemars = "0.8.8"
 revolt_rocket_okapi = { version = "0.9.1", features = ["swagger"] }
 
 # quark
-revolt-quark = { path = "../quark" }
+onechatsocial-quark = { path = "../quark" }
 
 # core
 authifier = "1.0.8"
-revolt-config = { path = "../core/config" }
-revolt-database = { path = "../core/database", features = [
+onechatsocial-config = { path = "../core/config" }
+onechatsocial-database = { path = "../core/database", features = [
     "rocket-impl",
     "redis-is-patched",
 ] }
-revolt-models = { path = "../core/models", features = ["schemas", "validator"] }
-revolt-result = { path = "../core/result", features = ["rocket", "okapi"] }
-revolt-permissions = { path = "../core/permissions", features = ["schemas"] }
+onechatsocial-models = { path = "../core/models", features = ["schemas", "validator"] }
+onechatsocial-result = { path = "../core/result", features = ["rocket", "okapi"] }
+onechatsocial-permissions = { path = "../core/permissions", features = ["schemas"] }
 
 [build-dependencies]
 vergen = "7.5.0"

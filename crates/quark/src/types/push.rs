@@ -1,6 +1,6 @@
 use std::time::SystemTime;
 
-use revolt_models::v0::Webhook;
+use onechatsocial_models::v0::Webhook;
 use serde::{Deserialize, Serialize};
 
 use crate::models::{Message, User};

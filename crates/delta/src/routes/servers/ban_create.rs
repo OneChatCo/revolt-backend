@@ -1,4 +1,4 @@
-use revolt_quark::{
+use onechatsocial_quark::{
     models::{server_member::MemberCompositeKey, ServerBan, User},
     perms, Db, Error, Permission, Ref, Result,
 };

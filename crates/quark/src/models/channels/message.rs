@@ -4,7 +4,7 @@ use indexmap::{IndexMap, IndexSet};
 use iso8601_timestamp::Timestamp;
 use once_cell::sync::Lazy;
 use regex::Regex;
-use revolt_models::v0::MessageWebhook;
+use onechatsocial_models::v0::MessageWebhook;
 use serde::{Deserialize, Serialize};
 use validator::Validate;
 

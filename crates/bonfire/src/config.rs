@@ -1,6 +1,6 @@
 use async_tungstenite::tungstenite::{handshake, Message};
 use futures::channel::oneshot::Sender;
-use revolt_quark::{Error, Result};
+use onechatsocial_quark::{Error, Result};
 use serde::{Deserialize, Serialize};
 
 /// Enumeration of supported protocol formats

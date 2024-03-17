@@ -1,4 +1,4 @@
-use revolt_quark::{
+use onechatsocial_quark::{
     models::{channel::PartialChannel, Channel, User},
     perms, Db, EmptyResponse, Error, Permission, Ref, Result,
 };

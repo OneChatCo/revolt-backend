@@ -1,13 +1,13 @@
 use authifier::AuthifierEvent;
 use serde::{Deserialize, Serialize};
 
-use revolt_models::v0::{
+use onechatsocial_models::v0::{
     AppendMessage, Channel, Emoji, FieldsChannel, FieldsMember, FieldsRole, FieldsServer,
     FieldsUser, FieldsWebhook, MemberCompositeKey, Message, PartialChannel, PartialMember,
     PartialMessage, PartialRole, PartialServer, PartialUser, PartialWebhook, Server, User,
     UserSettings, Webhook,
 };
-use revolt_result::Error;
+use onechatsocial_result::Error;
 
 use crate::Database;
 

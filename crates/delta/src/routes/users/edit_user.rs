@@ -1,10 +1,10 @@
 use once_cell::sync::Lazy;
 use regex::Regex;
-use revolt_quark::models::user::{FieldsUser, PartialUser, User};
-use revolt_quark::models::File;
-use revolt_quark::{Database, Error, Ref, Result};
+use onechatsocial_quark::models::user::{FieldsUser, PartialUser, User};
+use onechatsocial_quark::models::File;
+use onechatsocial_quark::{Database, Error, Ref, Result};
 
-use revolt_quark::models::user::UserStatus;
+use onechatsocial_quark::models::user::UserStatus;
 use rocket::serde::json::Json;
 use rocket::State;
 use serde::{Deserialize, Serialize};

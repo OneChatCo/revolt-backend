@@ -1,10 +1,10 @@
-use revolt_database::{
+use onechatsocial_database::{
     util::{idempotency::IdempotencyKey, reference::Reference},
     Database, Message,
 };
-use revolt_models::v0;
-use revolt_permissions::{ChannelPermission, PermissionValue};
-use revolt_result::{create_error, Result};
+use onechatsocial_models::v0;
+use onechatsocial_permissions::{ChannelPermission, PermissionValue};
+use onechatsocial_result::{create_error, Result};
 use rocket::{serde::json::Json, State};
 
 use validator::Validate;

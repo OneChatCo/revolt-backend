@@ -1,5 +1,5 @@
-use revolt_quark::models::stats::Stats;
-use revolt_quark::{Db, Result};
+use onechatsocial_quark::models::stats::Stats;
+use onechatsocial_quark::{Db, Result};
 
 use rocket::serde::json::Json;
 

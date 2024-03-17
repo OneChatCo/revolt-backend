@@ -1,4 +1,4 @@
-use revolt_quark::{
+use onechatsocial_quark::{
     models::{
         message::{
             BulkMessageResponse, MessageFilter, MessageQuery, MessageSort, MessageTimePeriod,

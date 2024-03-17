@@ -1,6 +1,6 @@
-use revolt_database::{util::reference::Reference, Database, Message};
-use revolt_models::v0::{MessageAuthor, SendableEmbed, Webhook};
-use revolt_result::{create_error, Error, Result};
+use onechatsocial_database::{util::reference::Reference, Database, Message};
+use onechatsocial_models::v0::{MessageAuthor, SendableEmbed, Webhook};
+use onechatsocial_result::{create_error, Error, Result};
 use revolt_rocket_okapi::{
     gen::OpenApiGenerator,
     request::{OpenApiFromRequest, RequestHeaderInput},

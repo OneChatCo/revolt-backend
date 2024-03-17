@@ -1,6 +1,6 @@
 use std::borrow::Cow;
 
-use revolt_permissions::{
+use onechatsocial_permissions::{
     calculate_user_permissions, ChannelType, Override, PermissionQuery, PermissionValue,
     RelationshipStatus, DEFAULT_PERMISSION_DIRECT_MESSAGE,
 };

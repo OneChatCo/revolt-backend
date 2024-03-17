@@ -1,4 +1,4 @@
-use revolt_result::{create_error, Result};
+use onechatsocial_result::{create_error, Result};
 
 use crate::Database;
 

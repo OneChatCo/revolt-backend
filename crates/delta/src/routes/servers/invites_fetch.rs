@@ -1,4 +1,4 @@
-use revolt_quark::{
+use onechatsocial_quark::{
     models::{Invite, User},
     perms, Db, Permission, Ref, Result,
 };

@@ -3,7 +3,7 @@ use std::time::SystemTime;
 use indexmap::{IndexMap, IndexSet};
 use once_cell::sync::Lazy;
 use regex::Regex;
-use revolt_config::config;
+use onechatsocial_config::config;
 
 #[cfg(feature = "validator")]
 use validator::Validate;

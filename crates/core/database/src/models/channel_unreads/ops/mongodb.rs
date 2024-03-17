@@ -1,6 +1,6 @@
 use bson::Document;
 use mongodb::options::UpdateOptions;
-use revolt_result::Result;
+use onechatsocial_result::Result;
 use ulid::Ulid;
 
 use crate::ChannelUnread;

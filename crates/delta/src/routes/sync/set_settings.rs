@@ -1,6 +1,6 @@
-use revolt_quark::models::User;
-use revolt_quark::r#impl::UserSettingsImpl;
-use revolt_quark::{Db, EmptyResponse, Result};
+use onechatsocial_quark::models::User;
+use onechatsocial_quark::r#impl::UserSettingsImpl;
+use onechatsocial_quark::{Db, EmptyResponse, Result};
 
 use chrono::prelude::*;
 use rocket::serde::json::Json;

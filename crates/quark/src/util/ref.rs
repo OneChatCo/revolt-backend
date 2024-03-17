@@ -1,5 +1,5 @@
 use futures::future::join;
-use revolt_presence::is_online;
+use onechatsocial_presence::is_online;
 use rocket::request::FromParam;
 use schemars::schema::{InstanceType, Schema, SchemaObject, SingleOrVec};
 use schemars::JsonSchema;

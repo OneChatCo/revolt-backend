@@ -11,8 +11,8 @@ use futures::{
     stream::{SplitSink, SplitStream},
     FutureExt, SinkExt, StreamExt, TryStreamExt,
 };
-use revolt_presence::{create_session, delete_session};
-use revolt_quark::{
+use onechatsocial_presence::{create_session, delete_session};
+use onechatsocial_quark::{
     events::{
         client::EventV1,
         server::ClientMessage,

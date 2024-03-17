@@ -1,4 +1,4 @@
-use revolt_quark::{
+use onechatsocial_quark::{
     models::{server_member::RemovalIntention, User},
     perms, Db, EmptyResponse, Error, Permission, Ref, Result,
 };

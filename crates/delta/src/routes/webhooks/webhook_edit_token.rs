@@ -1,8 +1,8 @@
-use revolt_database::util::reference::Reference;
-use revolt_database::{Database, PartialWebhook};
-use revolt_models::v0::{DataEditWebhook, Webhook};
-use revolt_models::validator::Validate;
-use revolt_result::{create_error, Result};
+use onechatsocial_database::util::reference::Reference;
+use onechatsocial_database::{Database, PartialWebhook};
+use onechatsocial_models::v0::{DataEditWebhook, Webhook};
+use onechatsocial_models::validator::Validate;
+use onechatsocial_result::{create_error, Result};
 use rocket::{serde::json::Json, State};
 
 /// # Edits a webhook

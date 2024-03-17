@@ -1,5 +1,5 @@
-use revolt_models::v0::*;
-use revolt_permissions::{calculate_user_permissions, UserPermission};
+use onechatsocial_models::v0::*;
+use onechatsocial_permissions::{calculate_user_permissions, UserPermission};
 
 use crate::{util::permissions::DatabasePermissionQuery, Database};
 
@@ -696,7 +696,7 @@ impl crate::User {
             privileged: self.privileged,
             bot: self.bot.map(|bot| bot.into()),
             relationship,
-            online: can_see_profile && revolt_presence::is_online(&self.id).await,
+            online: can_see_profile && onechatsocial_presence::is_online(&self.id).await,
             id: self.id,
         }
     }
@@ -723,7 +723,7 @@ impl crate::User {
             privileged: self.privileged,
             bot: self.bot.map(|bot| bot.into()),
             relationship: RelationshipStatus::User,
-            online: revolt_presence::is_online(&self.id).await,
+            online: onechatsocial_presence::is_online(&self.id).await,
             id: self.id,
         }
     }

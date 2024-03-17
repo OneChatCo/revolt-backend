@@ -1,4 +1,4 @@
-use revolt_quark::{Database, Ref, Result};
+use onechatsocial_quark::{Database, Ref, Result};
 
 use rocket::{serde::json::Json, State};
 use serde::Serialize;

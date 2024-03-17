@@ -1,7 +1,7 @@
 use rocket::serde::json::Json;
 use serde::Deserialize;
 
-use revolt_quark::{
+use onechatsocial_quark::{
     models::{channel::PartialChannel, Channel, User},
     perms, Db, Error, Override, Permission, Ref, Result,
 };

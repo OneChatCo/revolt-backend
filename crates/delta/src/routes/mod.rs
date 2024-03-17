@@ -1,4 +1,4 @@
-use revolt_quark::variables::delta::IS_STAGING;
+use onechatsocial_quark::variables::delta::IS_STAGING;
 use revolt_rocket_okapi::{revolt_okapi::openapi3::OpenApi, settings::OpenApiSettings};
 pub use rocket::http::Status;
 pub use rocket::response::Redirect;

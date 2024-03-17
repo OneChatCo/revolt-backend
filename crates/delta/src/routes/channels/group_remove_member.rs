@@ -1,4 +1,4 @@
-use revolt_quark::{
+use onechatsocial_quark::{
     models::{Channel, User},
     Db, EmptyResponse, Error, Permission, Ref, Result,
 };
@@ -44,8 +44,8 @@ pub async fn req(db: &Db, user: User, target: Ref, member: Ref) -> Result<EmptyR
 #[cfg(test)]
 mod test {
     use crate::{rocket, util::test::TestHarness};
-    use revolt_database::{events::client::EventV1, Channel, RelationshipStatus};
-    use revolt_models::v0;
+    use onechatsocial_database::{events::client::EventV1, Channel, RelationshipStatus};
+    use onechatsocial_models::v0;
     use rocket::http::{Header, Status};
 
     #[rocket::async_test]

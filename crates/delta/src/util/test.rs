@@ -1,9 +1,9 @@
 use futures::StreamExt;
 use rand::Rng;
 use redis_kiss::redis::aio::PubSub;
-use revolt_database::{events::client::EventV1, Database, User};
-use revolt_models::v0;
-use revolt_quark::authifier::{
+use onechatsocial_database::{events::client::EventV1, Database, User};
+use onechatsocial_models::v0;
+use onechatsocial_quark::authifier::{
     models::{Account, Session},
     Authifier,
 };

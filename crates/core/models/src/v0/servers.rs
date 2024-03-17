@@ -1,6 +1,6 @@
 use super::{Channel, File};
 
-use revolt_permissions::OverrideField;
+use onechatsocial_permissions::OverrideField;
 use std::collections::HashMap;
 
 #[cfg(feature = "validator")]

@@ -1,5 +1,5 @@
 use indexmap::IndexSet;
-use revolt_result::Result;
+use onechatsocial_result::Result;
 
 use crate::{AppendMessage, Message, MessageQuery, PartialMessage, ReferenceDb};
 

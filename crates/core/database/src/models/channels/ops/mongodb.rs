@@ -2,8 +2,8 @@ use super::AbstractChannels;
 use crate::{Channel, FieldsChannel, IntoDocumentPath, MongoDb, PartialChannel};
 use bson::Document;
 use futures::StreamExt;
-use revolt_permissions::OverrideField;
-use revolt_result::Result;
+use onechatsocial_permissions::OverrideField;
+use onechatsocial_result::Result;
 
 static COL: &str = "channels";
 

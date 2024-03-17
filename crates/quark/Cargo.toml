@@ -1,5 +1,5 @@
 [package]
-name = "revolt-quark"
+name = "onechatsocial-quark"
 version = "0.6.13"
 edition = "2021"
 license = "AGPL-3.0-or-later"
@@ -94,7 +94,7 @@ authifier = { version = "1.0.8", features = ["async-std-runtime"] }
 sentry = "0.31.5"
 
 # Core
-revolt-result = { path = "../core/result", features = ["serde", "schemas"] }
-revolt-presence = { path = "../core/presence", features = ["redis-is-patched"] }
-revolt-database = { path = "../core/database" }
-revolt-models = { path = "../core/models" }
+onechatsocial-result = { path = "../core/result", features = ["serde", "schemas"] }
+onechatsocial-presence = { path = "../core/presence", features = ["redis-is-patched"] }
+onechatsocial-database = { path = "../core/database" }
+onechatsocial-models = { path = "../core/models" }

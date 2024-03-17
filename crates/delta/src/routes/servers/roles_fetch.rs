@@ -1,4 +1,4 @@
-use revolt_quark::{models::server::Role, Db, Error, Ref, Result};
+use onechatsocial_quark::{models::server::Role, Db, Error, Ref, Result};
 use rocket::serde::json::Json;
 
 /// # Fetch Role

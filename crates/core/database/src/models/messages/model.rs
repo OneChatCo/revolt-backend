@@ -2,13 +2,13 @@ use std::collections::HashSet;
 
 use indexmap::{IndexMap, IndexSet};
 use iso8601_timestamp::Timestamp;
-use revolt_config::config;
-use revolt_models::v0::{
+use onechatsocial_config::config;
+use onechatsocial_models::v0::{
     self, DataMessageSend, Embed, MessageAuthor, MessageSort, MessageWebhook, PushNotification,
     ReplyIntent, SendableEmbed, RE_MENTION,
 };
-use revolt_permissions::{ChannelPermission, PermissionValue};
-use revolt_result::Result;
+use onechatsocial_permissions::{ChannelPermission, PermissionValue};
+use onechatsocial_result::Result;
 use ulid::Ulid;
 
 use crate::{

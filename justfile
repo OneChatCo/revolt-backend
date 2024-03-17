@@ -1,10 +1,12 @@
+set shell := ["powershell.exe", "-c"]
+
 publish:
-    cargo publish --package revolt-config
-    cargo publish --package revolt-result
-    cargo publish --package revolt-permissions
-    cargo publish --package revolt-models
-    cargo publish --package revolt-presence
-    cargo publish --package revolt-database
+    cargo publish --package onechatsocial-config
+    cargo publish --package onechatsocial-result
+    cargo publish --package onechatsocial-permissions
+    cargo publish --package onechatsocial-models
+    cargo publish --package onechatsocial-presence
+    cargo publish --package onechatsocial-database
 
 patch:
     cargo release version patch --execute

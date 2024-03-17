@@ -1,4 +1,4 @@
-use revolt_quark::{
+use onechatsocial_quark::{
     models::{Channel, Invite, Server, User},
     variables::delta::MAX_SERVER_COUNT,
     Db, Error, Ref, Result,

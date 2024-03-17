@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-use revolt_quark::{
+use onechatsocial_quark::{
     models::{
         server::{Category, FieldsServer, PartialServer, SystemMessageChannels},
         File, Server, User,

@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-use revolt_presence::filter_online;
+use onechatsocial_presence::filter_online;
 use serde_json::json;
 use ulid::Ulid;
 use validator::Validate;

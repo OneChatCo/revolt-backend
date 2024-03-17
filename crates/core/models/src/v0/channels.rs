@@ -1,6 +1,6 @@
 use super::File;
 
-use revolt_permissions::OverrideField;
+use onechatsocial_permissions::OverrideField;
 use std::collections::{HashMap, HashSet};
 
 auto_derived!(

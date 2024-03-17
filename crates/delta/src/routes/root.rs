@@ -1,8 +1,8 @@
-use revolt_quark::variables::delta::{
+use onechatsocial_quark::variables::delta::{
     APP_URL, AUTUMN_URL, EXTERNAL_WS_URL, HCAPTCHA_SITEKEY, INVITE_ONLY, JANUARY_URL, USE_AUTUMN,
     USE_EMAIL, USE_HCAPTCHA, USE_JANUARY, USE_VOSO, VAPID_PUBLIC_KEY, VOSO_URL, VOSO_WS_HOST,
 };
-use revolt_quark::Result;
+use onechatsocial_quark::Result;
 
 use rocket::serde::json::Json;
 use serde::Serialize;

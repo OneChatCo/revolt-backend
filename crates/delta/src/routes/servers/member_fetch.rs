@@ -1,5 +1,5 @@
-use revolt_quark::models::server_member::MemberResponse;
-use revolt_quark::{models::User, perms, Db, Ref, Result};
+use onechatsocial_quark::models::server_member::MemberResponse;
+use onechatsocial_quark::{models::User, perms, Db, Ref, Result};
 use rocket::serde::json::Json;
 /// # Fetch Member
 ///

@@ -1,5 +1,5 @@
-use revolt_quark::models::{Emoji, User};
-use revolt_quark::{perms, Db, Ref, Result};
+use onechatsocial_quark::models::{Emoji, User};
+use onechatsocial_quark::{perms, Db, Ref, Result};
 
 use rocket::serde::json::Json;
 

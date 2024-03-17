@@ -22,7 +22,7 @@ pub enum Error {
     /// Core crate error
     Core {
         #[serde(flatten)]
-        error: revolt_result::Error,
+        error: onechatsocial_result::Error,
     },
 
     // ? Onboarding related errors
@@ -147,7 +147,7 @@ impl Error {
     }
 
     /// Create a error from core error
-    pub fn from_core(error: revolt_result::Error) -> Error {
+    pub fn from_core(error: onechatsocial_result::Error) -> Error {
         Error::Core { error }
     }
 }

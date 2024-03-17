@@ -1,4 +1,4 @@
-use revolt_quark::{authifier::models::Session, models::User};
+use onechatsocial_quark::{authifier::models::Session, models::User};
 use rocket::serde::json::Json;
 use serde::Serialize;
 

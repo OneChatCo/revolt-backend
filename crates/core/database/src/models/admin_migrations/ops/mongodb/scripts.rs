@@ -9,7 +9,7 @@ use crate::{
 };
 use futures::StreamExt;
 use rand::seq::SliceRandom;
-use revolt_permissions::DEFAULT_WEBHOOK_PERMISSIONS;
+use onechatsocial_permissions::DEFAULT_WEBHOOK_PERMISSIONS;
 use serde::{Deserialize, Serialize};
 use unicode_segmentation::UnicodeSegmentation;
 

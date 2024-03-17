@@ -1,6 +1,6 @@
-use revolt_database::{util::reference::Reference, Database, User};
-use revolt_models::v0::PublicBot;
-use revolt_result::{create_error, Result};
+use onechatsocial_database::{util::reference::Reference, Database, User};
+use onechatsocial_models::v0::PublicBot;
+use onechatsocial_result::{create_error, Result};
 
 use rocket::serde::json::Json;
 use rocket::State;
@@ -27,8 +27,8 @@ pub async fn fetch_public_bot(
 #[cfg(test)]
 mod test {
     use crate::{rocket, util::test::TestHarness};
-    use revolt_database::{Bot, PartialBot};
-    use revolt_models::v0;
+    use onechatsocial_database::{Bot, PartialBot};
+    use onechatsocial_models::v0;
 
     #[rocket::async_test]
     async fn fetch_public() {

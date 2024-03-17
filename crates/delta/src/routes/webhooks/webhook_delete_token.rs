@@ -1,5 +1,5 @@
-use revolt_database::{util::reference::Reference, Database};
-use revolt_result::Result;
+use onechatsocial_database::{util::reference::Reference, Database};
+use onechatsocial_result::Result;
 use rocket::State;
 use rocket_empty::EmptyResponse;
 

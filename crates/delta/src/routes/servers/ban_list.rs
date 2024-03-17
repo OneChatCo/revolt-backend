@@ -1,5 +1,5 @@
-use revolt_quark::models::{File, ServerBan, User};
-use revolt_quark::{perms, Db, Permission, Ref, Result};
+use onechatsocial_quark::models::{File, ServerBan, User};
+use onechatsocial_quark::{perms, Db, Permission, Ref, Result};
 
 use rocket::serde::json::Json;
 use serde::{Deserialize, Serialize};

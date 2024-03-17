@@ -1,5 +1,5 @@
-use revolt_permissions::DataPermissionsValue;
-use revolt_quark::{
+use onechatsocial_permissions::DataPermissionsValue;
+use onechatsocial_quark::{
     models::{server::PartialServer, Server, User},
     perms, Db, Permission, Ref, Result,
 };

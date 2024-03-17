@@ -1,9 +1,9 @@
-use revolt_database::{
+use onechatsocial_database::{
     util::{permissions::DatabasePermissionQuery, reference::Reference},
     Database, User,
 };
-use revolt_permissions::{calculate_channel_permissions, ChannelPermission};
-use revolt_result::Result;
+use onechatsocial_permissions::{calculate_channel_permissions, ChannelPermission};
+use onechatsocial_result::Result;
 use rocket::State;
 use rocket_empty::EmptyResponse;
 

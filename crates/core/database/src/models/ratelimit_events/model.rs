@@ -1,6 +1,6 @@
 use std::fmt;
 
-use revolt_result::Result;
+use onechatsocial_result::Result;
 use ulid::Ulid;
 
 use crate::Database;

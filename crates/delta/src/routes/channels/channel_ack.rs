@@ -1,4 +1,4 @@
-use revolt_quark::{models::User, perms, Db, EmptyResponse, Error, Permission, Ref, Result};
+use onechatsocial_quark::{models::User, perms, Db, EmptyResponse, Error, Permission, Ref, Result};
 
 /// # Acknowledge Message
 ///

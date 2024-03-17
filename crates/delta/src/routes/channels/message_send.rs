@@ -1,12 +1,12 @@
 use chrono::{Duration, Utc};
-use revolt_database::util::permissions::DatabasePermissionQuery;
-use revolt_database::{
+use onechatsocial_database::util::permissions::DatabasePermissionQuery;
+use onechatsocial_database::{
     util::idempotency::IdempotencyKey, util::reference::Reference, Database, User,
 };
-use revolt_database::{Interactions, Message};
-use revolt_models::v0;
-use revolt_permissions::{calculate_channel_permissions, ChannelPermission};
-use revolt_result::{create_error, Result};
+use onechatsocial_database::{Interactions, Message};
+use onechatsocial_models::v0;
+use onechatsocial_permissions::{calculate_channel_permissions, ChannelPermission};
+use onechatsocial_result::{create_error, Result};
 use rocket::serde::json::Json;
 use rocket::State;
 use validator::Validate;

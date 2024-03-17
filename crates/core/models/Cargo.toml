@@ -1,5 +1,5 @@
 [package]
-name = "revolt-models"
+name = "onechatsocial-models"
 version = "0.6.13"
 edition = "2021"
 license = "AGPL-3.0-or-later"
@@ -9,8 +9,8 @@ description = "Revolt Backend: API Models"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
-serde = ["dep:serde", "revolt-permissions/serde", "indexmap/serde"]
-schemas = ["dep:schemars", "revolt-permissions/schemas"]
+serde = ["dep:serde", "onechatsocial-permissions/serde", "indexmap/serde"]
+schemas = ["dep:schemars", "onechatsocial-permissions/schemas"]
 validator = ["dep:validator"]
 partials = ["dep:revolt_optional_struct", "serde", "schemas"]
 
@@ -18,8 +18,8 @@ default = ["serde", "partials"]
 
 [dependencies]
 # Core
-revolt-config = { version = "0.6.13", path = "../config" }
-revolt-permissions = { version = "0.6.13", path = "../permissions" }
+onechatsocial-config = { version = "0.6.13", path = "../config" }
+onechatsocial-permissions = { version = "0.6.13", path = "../permissions" }
 
 # Utility
 regex = "1"

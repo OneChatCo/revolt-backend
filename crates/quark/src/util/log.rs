@@ -29,7 +29,7 @@ pub fn setup_logging(release: &'static str) -> Option<sentry::ClientInitGuard> {
 #[macro_export]
 macro_rules! configure {
     () => {
-        let _sentry = revolt_quark::util::log::setup_logging(concat!(
+        let _sentry = onechatsocial_quark::util::log::setup_logging(concat!(
             env!("CARGO_PKG_NAME"),
             "@",
             env!("CARGO_PKG_VERSION")

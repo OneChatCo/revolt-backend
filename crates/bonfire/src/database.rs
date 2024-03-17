@@ -1,5 +1,5 @@
 use once_cell::sync::OnceCell;
-use revolt_quark::{Database, DatabaseInfo};
+use onechatsocial_quark::{Database, DatabaseInfo};
 
 static DBCONN: OnceCell<Database> = OnceCell::new();
 

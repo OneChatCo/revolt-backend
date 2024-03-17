@@ -2574,6 +2574,8 @@ dependencies = [
  "hmac",
  "lazy_static",
  "md-5",
+ "openssl",
+ "openssl-probe",
  "os_info",
  "pbkdf2",
  "percent-encoding",
@@ -2591,6 +2593,7 @@ dependencies = [
  "take_mut",
  "thiserror",
  "tokio 1.35.1",
+ "tokio-openssl",
  "tokio-rustls",
  "tokio-util 0.7.2",
  "trust-dns-proto",
@@ -2791,6 +2794,236 @@ name = "once_cell"
 version = "1.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dd8b5dd2ae5ed71462c540258bedcb51965123ad7e7ccf4b9a8cafaa4a63576d"
+
+[[package]]
+name = "onechatsocial-bonfire"
+version = "0.6.13"
+dependencies = [
+ "async-std",
+ "async-tungstenite",
+ "bincode",
+ "fred",
+ "futures",
+ "log",
+ "once_cell",
+ "onechatsocial-presence",
+ "onechatsocial-quark",
+ "querystring",
+ "rmp-serde",
+ "sentry",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "onechatsocial-config"
+version = "0.6.13"
+dependencies = [
+ "async-std",
+ "cached",
+ "config",
+ "futures-locks",
+ "once_cell",
+ "serde",
+]
+
+[[package]]
+name = "onechatsocial-database"
+version = "0.6.13"
+dependencies = [
+ "async-lock",
+ "async-recursion",
+ "async-std",
+ "async-trait",
+ "authifier",
+ "base64 0.21.3",
+ "bson",
+ "deadqueue",
+ "decancer",
+ "fcm",
+ "futures",
+ "indexmap",
+ "isahc",
+ "iso8601-timestamp 0.2.11",
+ "linkify 0.8.1",
+ "log",
+ "lru 0.11.0",
+ "mongodb",
+ "nanoid",
+ "once_cell",
+ "onechatsocial-config",
+ "onechatsocial-models",
+ "onechatsocial-permissions",
+ "onechatsocial-presence",
+ "onechatsocial-result",
+ "rand 0.8.5",
+ "redis-kiss",
+ "regex",
+ "revolt_okapi",
+ "revolt_optional_struct",
+ "revolt_rocket_okapi",
+ "rocket",
+ "schemars",
+ "serde",
+ "serde_json",
+ "ulid 1.0.0",
+ "unicode-segmentation",
+ "url-escape",
+ "web-push 0.10.0",
+]
+
+[[package]]
+name = "onechatsocial-delta"
+version = "0.6.13"
+dependencies = [
+ "async-channel",
+ "async-std",
+ "authifier",
+ "bitfield",
+ "chrono",
+ "dashmap",
+ "dotenv",
+ "env_logger",
+ "futures",
+ "impl_ops",
+ "lettre",
+ "linkify 0.6.0",
+ "log",
+ "lru 0.7.6",
+ "nanoid",
+ "num_enum 0.5.7",
+ "once_cell",
+ "onechatsocial-config",
+ "onechatsocial-database",
+ "onechatsocial-models",
+ "onechatsocial-permissions",
+ "onechatsocial-quark",
+ "onechatsocial-result",
+ "rand 0.8.5",
+ "redis-kiss",
+ "regex",
+ "reqwest",
+ "revolt_rocket_okapi",
+ "rocket",
+ "rocket_authifier",
+ "rocket_cors",
+ "rocket_empty",
+ "rocket_prometheus",
+ "schemars",
+ "serde",
+ "serde_json",
+ "ulid 0.4.1",
+ "url",
+ "validator 0.16.0",
+ "vergen",
+]
+
+[[package]]
+name = "onechatsocial-models"
+version = "0.6.13"
+dependencies = [
+ "indexmap",
+ "iso8601-timestamp 0.2.11",
+ "once_cell",
+ "onechatsocial-config",
+ "onechatsocial-permissions",
+ "regex",
+ "revolt_optional_struct",
+ "schemars",
+ "serde",
+ "validator 0.16.0",
+]
+
+[[package]]
+name = "onechatsocial-permissions"
+version = "0.6.13"
+dependencies = [
+ "async-std",
+ "async-trait",
+ "auto_ops",
+ "bson",
+ "num_enum 0.6.1",
+ "once_cell",
+ "onechatsocial-result",
+ "schemars",
+ "serde",
+]
+
+[[package]]
+name = "onechatsocial-presence"
+version = "0.6.13"
+dependencies = [
+ "async-std",
+ "log",
+ "once_cell",
+ "rand 0.8.5",
+ "redis-kiss",
+]
+
+[[package]]
+name = "onechatsocial-quark"
+version = "0.6.13"
+dependencies = [
+ "async-lock",
+ "async-recursion",
+ "async-std",
+ "async-trait",
+ "authifier",
+ "base64 0.13.0",
+ "bincode",
+ "bitfield",
+ "bson",
+ "dashmap",
+ "deadqueue",
+ "decancer",
+ "dotenv",
+ "futures",
+ "impl_ops",
+ "indexmap",
+ "iso8601-timestamp 0.1.10",
+ "linkify 0.8.1",
+ "log",
+ "lru 0.7.6",
+ "mongodb",
+ "nanoid",
+ "num_enum 0.5.7",
+ "once_cell",
+ "onechatsocial-database",
+ "onechatsocial-models",
+ "onechatsocial-presence",
+ "onechatsocial-result",
+ "pretty_env_logger",
+ "rand 0.8.5",
+ "redis-kiss",
+ "regex",
+ "reqwest",
+ "revolt_okapi",
+ "revolt_optional_struct",
+ "revolt_rocket_okapi",
+ "rocket",
+ "rocket_cors",
+ "rocket_empty",
+ "rocket_http",
+ "schemars",
+ "sentry",
+ "serde",
+ "serde_json",
+ "ulid 0.5.0",
+ "validator 0.16.0",
+ "web-push 0.7.2",
+]
+
+[[package]]
+name = "onechatsocial-result"
+version = "0.6.13"
+dependencies = [
+ "revolt_okapi",
+ "revolt_rocket_okapi",
+ "rocket",
+ "schemars",
+ "serde",
+ "serde_json",
+]
 
 [[package]]
 name = "opaque-debug"
@@ -3576,236 +3809,6 @@ checksum = "52e44394d2086d010551b14b53b1f24e31647570cd1deb0379e2c21b329aba00"
 dependencies = [
  "hostname",
  "quick-error",
-]
-
-[[package]]
-name = "revolt-bonfire"
-version = "0.6.13"
-dependencies = [
- "async-std",
- "async-tungstenite",
- "bincode",
- "fred",
- "futures",
- "log",
- "once_cell",
- "querystring",
- "revolt-presence",
- "revolt-quark",
- "rmp-serde",
- "sentry",
- "serde",
- "serde_json",
-]
-
-[[package]]
-name = "revolt-config"
-version = "0.6.13"
-dependencies = [
- "async-std",
- "cached",
- "config",
- "futures-locks",
- "once_cell",
- "serde",
-]
-
-[[package]]
-name = "revolt-database"
-version = "0.6.13"
-dependencies = [
- "async-lock",
- "async-recursion",
- "async-std",
- "async-trait",
- "authifier",
- "base64 0.21.3",
- "bson",
- "deadqueue",
- "decancer",
- "fcm",
- "futures",
- "indexmap",
- "isahc",
- "iso8601-timestamp 0.2.11",
- "linkify 0.8.1",
- "log",
- "lru 0.11.0",
- "mongodb",
- "nanoid",
- "once_cell",
- "rand 0.8.5",
- "redis-kiss",
- "regex",
- "revolt-config",
- "revolt-models",
- "revolt-permissions",
- "revolt-presence",
- "revolt-result",
- "revolt_okapi",
- "revolt_optional_struct",
- "revolt_rocket_okapi",
- "rocket",
- "schemars",
- "serde",
- "serde_json",
- "ulid 1.0.0",
- "unicode-segmentation",
- "url-escape",
- "web-push 0.10.0",
-]
-
-[[package]]
-name = "revolt-delta"
-version = "0.6.13"
-dependencies = [
- "async-channel",
- "async-std",
- "authifier",
- "bitfield",
- "chrono",
- "dashmap",
- "dotenv",
- "env_logger",
- "futures",
- "impl_ops",
- "lettre",
- "linkify 0.6.0",
- "log",
- "lru 0.7.6",
- "nanoid",
- "num_enum 0.5.7",
- "once_cell",
- "rand 0.8.5",
- "redis-kiss",
- "regex",
- "reqwest",
- "revolt-config",
- "revolt-database",
- "revolt-models",
- "revolt-permissions",
- "revolt-quark",
- "revolt-result",
- "revolt_rocket_okapi",
- "rocket",
- "rocket_authifier",
- "rocket_cors",
- "rocket_empty",
- "rocket_prometheus",
- "schemars",
- "serde",
- "serde_json",
- "ulid 0.4.1",
- "url",
- "validator 0.16.0",
- "vergen",
-]
-
-[[package]]
-name = "revolt-models"
-version = "0.6.13"
-dependencies = [
- "indexmap",
- "iso8601-timestamp 0.2.11",
- "once_cell",
- "regex",
- "revolt-config",
- "revolt-permissions",
- "revolt_optional_struct",
- "schemars",
- "serde",
- "validator 0.16.0",
-]
-
-[[package]]
-name = "revolt-permissions"
-version = "0.6.13"
-dependencies = [
- "async-std",
- "async-trait",
- "auto_ops",
- "bson",
- "num_enum 0.6.1",
- "once_cell",
- "revolt-result",
- "schemars",
- "serde",
-]
-
-[[package]]
-name = "revolt-presence"
-version = "0.6.13"
-dependencies = [
- "async-std",
- "log",
- "once_cell",
- "rand 0.8.5",
- "redis-kiss",
-]
-
-[[package]]
-name = "revolt-quark"
-version = "0.6.13"
-dependencies = [
- "async-lock",
- "async-recursion",
- "async-std",
- "async-trait",
- "authifier",
- "base64 0.13.0",
- "bincode",
- "bitfield",
- "bson",
- "dashmap",
- "deadqueue",
- "decancer",
- "dotenv",
- "futures",
- "impl_ops",
- "indexmap",
- "iso8601-timestamp 0.1.10",
- "linkify 0.8.1",
- "log",
- "lru 0.7.6",
- "mongodb",
- "nanoid",
- "num_enum 0.5.7",
- "once_cell",
- "pretty_env_logger",
- "rand 0.8.5",
- "redis-kiss",
- "regex",
- "reqwest",
- "revolt-database",
- "revolt-models",
- "revolt-presence",
- "revolt-result",
- "revolt_okapi",
- "revolt_optional_struct",
- "revolt_rocket_okapi",
- "rocket",
- "rocket_cors",
- "rocket_empty",
- "rocket_http",
- "schemars",
- "sentry",
- "serde",
- "serde_json",
- "ulid 0.5.0",
- "validator 0.16.0",
- "web-push 0.7.2",
-]
-
-[[package]]
-name = "revolt-result"
-version = "0.6.13"
-dependencies = [
- "revolt_okapi",
- "revolt_rocket_okapi",
- "rocket",
- "schemars",
- "serde",
- "serde_json",
 ]
 
 [[package]]
@@ -4916,6 +4919,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f7d995660bd2b7f8c1568414c1126076c13fbb725c40112dc0120b78eb9b717b"
 dependencies = [
  "native-tls",
+ "tokio 1.35.1",
+]
+
+[[package]]
+name = "tokio-openssl"
+version = "0.6.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c08f9ffb7809f1b20c1b398d92acf4cc719874b3b2b2d9ea2f09b4a80350878a"
+dependencies = [
+ "futures-util",
+ "openssl",
+ "openssl-sys",
  "tokio 1.35.1",
 ]
 

@@ -1,6 +1,6 @@
 use once_cell::sync::Lazy;
 use regex::Regex;
-use revolt_quark::{authifier::models::Account, models::User, Database, Error, Result};
+use onechatsocial_quark::{authifier::models::Account, models::User, Database, Error, Result};
 use rocket::{serde::json::Json, State};
 use serde::{Deserialize, Serialize};
 use validator::Validate;

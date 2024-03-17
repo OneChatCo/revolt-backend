@@ -1,5 +1,5 @@
 [package]
-name = "revolt-permissions"
+name = "onechatsocial-permissions"
 version = "0.6.13"
 edition = "2021"
 license = "AGPL-3.0-or-later"
@@ -21,7 +21,7 @@ async-std = { version = "1.8.0", features = ["attributes"] }
 
 [dependencies]
 # Core
-revolt-result = { version = "0.6.13", path = "../result" }
+onechatsocial-result = { version = "0.6.13", path = "../result" }
 
 # Utility
 auto_ops = "0.3.0"

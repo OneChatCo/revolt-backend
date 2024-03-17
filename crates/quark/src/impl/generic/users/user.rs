@@ -10,8 +10,8 @@ use futures::try_join;
 use impl_ops::impl_op_ex_commutative;
 use once_cell::sync::Lazy;
 use rand::seq::SliceRandom;
-use revolt_database::RatelimitEventType;
-use revolt_presence::filter_online;
+use onechatsocial_database::RatelimitEventType;
+use onechatsocial_presence::filter_online;
 use std::collections::HashSet;
 use std::ops;
 use std::time::Duration;
@@ -230,7 +230,7 @@ impl User {
             if available_discriminators.contains(&&preferred) {
                 return Ok(preferred);
             } else {
-                let rvdb: revolt_database::Database = db.clone().into();
+                let rvdb: onechatsocial_database::Database = db.clone().into();
                 if rvdb
                     .has_ratelimited(
                         &target_id,
@@ -246,7 +246,7 @@ impl User {
 
                 // FIXME: don't access directly?
                 #[allow(clippy::disallowed_methods)]
-                rvdb.insert_ratelimit_event(&revolt_database::RatelimitEvent {
+                rvdb.insert_ratelimit_event(&onechatsocial_database::RatelimitEvent {
                     id: ulid::Ulid::new().to_string(),
                     target_id,
                     event_type: RatelimitEventType::DiscriminatorChange,
@@ -473,7 +473,7 @@ impl User {
     pub async fn from_token(db: &Database, token: &str, hint: UserHint) -> Result<User> {
         match hint {
             UserHint::Bot => {
-                let rvdb: revolt_database::Database = db.clone().into();
+                let rvdb: onechatsocial_database::Database = db.clone().into();
                 db.fetch_user(
                     &rvdb
                         .fetch_bot_by_token(token)

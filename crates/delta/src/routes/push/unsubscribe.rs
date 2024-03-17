@@ -1,4 +1,4 @@
-use revolt_quark::{
+use onechatsocial_quark::{
     authifier::{models::Session, Authifier},
     EmptyResponse, Error, Result,
 };

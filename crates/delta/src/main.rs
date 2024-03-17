@@ -8,7 +8,7 @@ extern crate serde_json;
 pub mod routes;
 pub mod util;
 
-use revolt_database::{Database, MongoDb};
+use onechatsocial_database::{Database, MongoDb};
 use rocket::{Build, Rocket};
 use rocket_cors::{AllowedOrigins, CorsOptions};
 use rocket_prometheus::PrometheusMetrics;
@@ -16,14 +16,14 @@ use std::net::Ipv4Addr;
 use std::str::FromStr;
 
 use async_std::channel::unbounded;
-use revolt_quark::authifier::{Authifier, AuthifierEvent};
-use revolt_quark::events::client::EventV1;
-use revolt_quark::DatabaseInfo;
+use onechatsocial_quark::authifier::{Authifier, AuthifierEvent};
+use onechatsocial_quark::events::client::EventV1;
+use onechatsocial_quark::DatabaseInfo;
 use rocket::data::ToByteUnit;
 
 pub async fn web() -> Rocket<Build> {
     // Setup database
-    let db = revolt_database::DatabaseInfo::Auto.connect().await.unwrap();
+    let db = onechatsocial_database::DatabaseInfo::Auto.connect().await.unwrap();
     db.migrate_database().await.unwrap();
 
     // Legacy database setup from quark
@@ -40,7 +40,7 @@ pub async fn web() -> Rocket<Build> {
                 authifier::database::MongoDb(client.database("revolt")),
             ),
         },
-        config: revolt_quark::util::authifier::config(),
+        config: onechatsocial_quark::util::authifier::config(),
         event_channel: Some(sender),
     };
 
@@ -61,11 +61,11 @@ pub async fn web() -> Rocket<Build> {
     });
 
     // Launch background task workers
-    async_std::task::spawn(revolt_database::tasks::start_workers(
+    async_std::task::spawn(onechatsocial_database::tasks::start_workers(
         db.clone(),
         authifier.database.clone(),
     ));
-    async_std::task::spawn(revolt_quark::tasks::start_workers(
+    async_std::task::spawn(onechatsocial_quark::tasks::start_workers(
         legacy_db.clone(),
         authifier.database.clone(),
     ));
@@ -119,10 +119,10 @@ pub async fn web() -> Rocket<Build> {
 #[launch]
 async fn rocket() -> _ {
     // Configure logging and environment
-    revolt_quark::configure!();
+    onechatsocial_quark::configure!();
 
     // Ensure environment variables are present
-    revolt_quark::variables::delta::preflight_checks();
+    onechatsocial_quark::variables::delta::preflight_checks();
 
     // Start web server
     web().await

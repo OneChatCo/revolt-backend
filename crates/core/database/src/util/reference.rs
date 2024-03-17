@@ -1,4 +1,4 @@
-use revolt_result::Result;
+use onechatsocial_result::Result;
 #[cfg(feature = "rocket-impl")]
 use rocket::request::FromParam;
 #[cfg(feature = "rocket-impl")]
