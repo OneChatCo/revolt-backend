@@ -1,6 +1,8 @@
 mod mongodb;
 mod reference;
 
+use std::env;
+
 use rand::Rng;
 use onechatsocial_config::config;
 
@@ -38,22 +40,32 @@ impl DatabaseInfo {
 
         Ok(match self {
             DatabaseInfo::Auto => {
-                if std::env::var("TEST_DB").is_ok() {
-                    DatabaseInfo::Test(format!(
-                        "revolt_test_{}",
-                        rand::thread_rng().gen_range(1_000_000..10_000_000)
-                    ))
-                    .connect()
-                    .await?
-                } else if !config.database.mongodb.is_empty() {
+                // Directly attempt to use MONGODB if it's set.
+                if let Ok(uri) = env::var("MONGODB") {
                     DatabaseInfo::MongoDb {
-                        uri: config.database.mongodb,
+                        uri: uri.to_string(),
                         database_name: "revolt".to_string(),
                     }
                     .connect()
                     .await?
                 } else {
-                    DatabaseInfo::Reference.connect().await?
+                    if std::env::var("TEST_DB").is_ok() {
+                        DatabaseInfo::Test(format!(
+                            "revolt_test_{}",
+                            rand::thread_rng().gen_range(1_000_000..10_000_000)
+                        ))
+                        .connect()
+                        .await?
+                    } else if !config.database.mongodb.is_empty() {
+                        DatabaseInfo::MongoDb {
+                            uri: config.database.mongodb,
+                            database_name: "revolt".to_string(),
+                        }
+                        .connect()
+                        .await?
+                    } else {
+                        DatabaseInfo::Reference.connect().await?
+                    }
                 }
             }
             DatabaseInfo::Test(database_name) => {
