@@ -40,32 +40,31 @@ impl DatabaseInfo {
 
         Ok(match self {
             DatabaseInfo::Auto => {
-                // Directly attempt to use MONGODB if it's set.
-                if let Ok(uri) = env::var("MONGODB") {
+                // Are we currently running a test environment?
+                if std::env::var("TEST_DB").is_ok() {
+                    DatabaseInfo::Test(format!(
+                        "revolt_test_{}",
+                        rand::thread_rng().gen_range(1_000_000..10_000_000)
+                    ))
+                    .connect()
+                    .await?
+                } else if env::var("MONGODB").is_ok() {
+                    // Not testing and MongoDB is set
                     DatabaseInfo::MongoDb {
-                        uri: uri.to_string(),
+                        uri: env::var("MONGODB").unwrap_or_default().to_string(),
+                        database_name: "revolt".to_string(),
+                    }
+                    .connect()
+                    .await?
+                } else if !config.database.mongodb.is_empty() {
+                    DatabaseInfo::MongoDb {
+                        uri: config.database.mongodb,
                         database_name: "revolt".to_string(),
                     }
                     .connect()
                     .await?
                 } else {
-                    if std::env::var("TEST_DB").is_ok() {
-                        DatabaseInfo::Test(format!(
-                            "revolt_test_{}",
-                            rand::thread_rng().gen_range(1_000_000..10_000_000)
-                        ))
-                        .connect()
-                        .await?
-                    } else if !config.database.mongodb.is_empty() {
-                        DatabaseInfo::MongoDb {
-                            uri: config.database.mongodb,
-                            database_name: "revolt".to_string(),
-                        }
-                        .connect()
-                        .await?
-                    } else {
-                        DatabaseInfo::Reference.connect().await?
-                    }
+                    DatabaseInfo::Reference.connect().await?
                 }
             }
             DatabaseInfo::Test(database_name) => {
