@@ -3,11 +3,11 @@ mongodb = "mongodb://database"
 redis = "redis://redis/"
 
 [hosts]
-app = "http://local.revolt.chat"
-api = "http://local.revolt.chat/api"
-events = "ws://local.revolt.chat/ws"
-autumn = "http://local.revolt.chat/autumn"
-january = "http://local.revolt.chat/january"
+app = "https://onech.at"
+api = "https://api.onech.at"
+events = "wss://onech.at"
+autumn = "https://autumn.onech.at"
+january = "https://january.onech.at"
 voso_legacy = ""
 voso_legacy_ws = ""
 
@@ -39,7 +39,7 @@ hcaptcha_key = ""
 hcaptcha_sitekey = ""
 
 [api.workers]
-max_concurrent_connections = 50
+max_concurrent_connections = 100
 
 [features]
 
@@ -49,14 +49,14 @@ max_concurrent_connections = 50
 group_size = 100
 bots = 5
 message_length = 2048
-message_embeds = 20
+message_embeds = 10
 message_replies = 5
 message_attachments = 10
 message_reactions = 20
 servers = 100
 server_emoji = 100
 server_roles = 200
-server_channels = 500
+server_channels = 1000
 
 attachment_size = 20000000
 avatar_size = 4000000
