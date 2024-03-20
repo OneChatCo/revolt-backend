@@ -2797,7 +2797,7 @@ checksum = "dd8b5dd2ae5ed71462c540258bedcb51965123ad7e7ccf4b9a8cafaa4a63576d"
 
 [[package]]
 name = "onechatsocial-bonfire"
-version = "0.6.13"
+version = "0.6.14"
 dependencies = [
  "async-std",
  "async-tungstenite",
@@ -2817,7 +2817,7 @@ dependencies = [
 
 [[package]]
 name = "onechatsocial-config"
-version = "0.6.13"
+version = "0.6.14"
 dependencies = [
  "async-std",
  "cached",
@@ -2829,7 +2829,7 @@ dependencies = [
 
 [[package]]
 name = "onechatsocial-database"
-version = "0.6.13"
+version = "0.6.14"
 dependencies = [
  "async-lock",
  "async-recursion",
@@ -2874,7 +2874,7 @@ dependencies = [
 
 [[package]]
 name = "onechatsocial-delta"
-version = "0.6.13"
+version = "0.6.14"
 dependencies = [
  "async-channel",
  "async-std",
@@ -2920,7 +2920,7 @@ dependencies = [
 
 [[package]]
 name = "onechatsocial-models"
-version = "0.6.13"
+version = "0.6.14"
 dependencies = [
  "indexmap",
  "iso8601-timestamp 0.2.11",
@@ -2936,7 +2936,7 @@ dependencies = [
 
 [[package]]
 name = "onechatsocial-permissions"
-version = "0.6.13"
+version = "0.6.14"
 dependencies = [
  "async-std",
  "async-trait",
@@ -2951,7 +2951,7 @@ dependencies = [
 
 [[package]]
 name = "onechatsocial-presence"
-version = "0.6.13"
+version = "0.6.14"
 dependencies = [
  "async-std",
  "log",
@@ -2962,7 +2962,7 @@ dependencies = [
 
 [[package]]
 name = "onechatsocial-quark"
-version = "0.6.13"
+version = "0.6.14"
 dependencies = [
  "async-lock",
  "async-recursion",
@@ -3015,7 +3015,7 @@ dependencies = [
 
 [[package]]
 name = "onechatsocial-result"
-version = "0.6.13"
+version = "0.6.14"
 dependencies = [
  "revolt_okapi",
  "revolt_rocket_okapi",
