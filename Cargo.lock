@@ -2574,8 +2574,6 @@ dependencies = [
  "hmac",
  "lazy_static",
  "md-5",
- "openssl",
- "openssl-probe",
  "os_info",
  "pbkdf2",
  "percent-encoding",
@@ -2593,7 +2591,6 @@ dependencies = [
  "take_mut",
  "thiserror",
  "tokio 1.35.1",
- "tokio-openssl",
  "tokio-rustls",
  "tokio-util 0.7.2",
  "trust-dns-proto",
@@ -4919,18 +4916,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f7d995660bd2b7f8c1568414c1126076c13fbb725c40112dc0120b78eb9b717b"
 dependencies = [
  "native-tls",
- "tokio 1.35.1",
-]
-
-[[package]]
-name = "tokio-openssl"
-version = "0.6.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c08f9ffb7809f1b20c1b398d92acf4cc719874b3b2b2d9ea2f09b4a80350878a"
-dependencies = [
- "futures-util",
- "openssl",
- "openssl-sys",
  "tokio 1.35.1",
 ]
 

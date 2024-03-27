@@ -58,7 +58,7 @@ redis-kiss = { version = "0.1.4" }
 
 # Database
 bson = { optional = true, version = "2.1.0" }
-mongodb = { optional = true, version = "2.1.0", default-features = false, features = ["openssl-tls"] }
+mongodb = { optional = true, version = "2.1.0", default-features = false }
 
 # Database Migration
 unicode-segmentation = "1.10.1"
