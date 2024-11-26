@@ -3,11 +3,11 @@ mongodb = "mongodb://database"
 redis = "redis://redis/"
 
 [hosts]
-app = "https://onech.at"
-api = "https://api.onech.at"
-events = "wss://onech.at"
-autumn = "https://autumn.onech.at"
-january = "https://january.onech.at"
+app = "https://revolt.onech.at"
+api = "https://revolt-api.onech.at"
+events = "wss://revolt-ws.onech.at"
+autumn = "https://revolt-autumn.onech.at"
+january = "https://revolt-january.onech.at"
 voso_legacy = ""
 voso_legacy_ws = ""
 
