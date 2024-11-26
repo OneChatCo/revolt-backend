@@ -143,7 +143,7 @@ fn resolve_bucket_limit(bucket: &str) -> u8 {
         "bots" => 10,
         "messaging" => 10,
         "channels" => 15,
-        "servers" => 5,
+        "servers" => 255,
         "auth" => 15,
         "auth_delete" => 255,
         "default_avatar" => 255,
