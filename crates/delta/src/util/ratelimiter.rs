@@ -150,7 +150,7 @@ fn resolve_bucket_limit(bucket: &str) -> u8 {
         "swagger" => 100,
         "safety" => 15,
         "safety_report" => 3,
-        _ => 20,
+        _ => 255,
     }
 }
 
