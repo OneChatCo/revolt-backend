@@ -1,6 +1,6 @@
 [package]
 name = "onechatsocial-database"
-version = "0.6.19"
+version = "0.6.20"
 edition = "2021"
 license = "AGPL-3.0-or-later"
 authors = ["Paul Makles <me@insrt.uk>"]
@@ -23,11 +23,11 @@ default = ["mongodb", "async-std-runtime", "tasks"]
 
 [dependencies]
 # Core
-onechatsocial-config = { version = "0.6.19", path = "../config" }
-onechatsocial-result = { version = "0.6.19", path = "../result" }
-onechatsocial-models = { version = "0.6.19", path = "../models" }
-onechatsocial-presence = { version = "0.6.19", path = "../presence" }
-onechatsocial-permissions = { version = "0.6.19", path = "../permissions", features = [
+onechatsocial-config = { version = "0.6.20", path = "../config" }
+onechatsocial-result = { version = "0.6.20", path = "../result" }
+onechatsocial-models = { version = "0.6.20", path = "../models" }
+onechatsocial-presence = { version = "0.6.20", path = "../presence" }
+onechatsocial-permissions = { version = "0.6.20", path = "../permissions", features = [
     "serde",
     "bson",
 ] }
