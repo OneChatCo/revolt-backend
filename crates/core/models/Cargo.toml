@@ -1,6 +1,6 @@
 [package]
 name = "onechatsocial-models"
-version = "0.6.18"
+version = "0.6.19"
 edition = "2021"
 license = "AGPL-3.0-or-later"
 authors = ["Paul Makles <me@insrt.uk>"]
@@ -18,8 +18,8 @@ default = ["serde", "partials"]
 
 [dependencies]
 # Core
-onechatsocial-config = { version = "0.6.18", path = "../config" }
-onechatsocial-permissions = { version = "0.6.18", path = "../permissions" }
+onechatsocial-config = { version = "0.6.19", path = "../config" }
+onechatsocial-permissions = { version = "0.6.19", path = "../permissions" }
 
 # Utility
 regex = "1"
