@@ -23,6 +23,8 @@ pub async fn set_role_permissions(
 ) -> Result<Json<v0::Channel>> {
     let mut channel = target.as_channel(db).await?;
     let mut query = DatabasePermissionQuery::new(db, &user).channel(&channel);
+    query.set_server_from_channel().await;
+    let _ = query.are_we_a_member().await;
     let permissions = calculate_channel_permissions(&mut query).await;
 
     permissions.throw_if_lacking_channel_permission(ChannelPermission::ManagePermissions)?;
