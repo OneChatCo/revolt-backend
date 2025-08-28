@@ -392,6 +392,13 @@ impl<'a> DatabasePermissionQuery<'a> {
         }
     }
 
+    /// Hydrate the query with additional data
+    pub async fn hydrate(mut self) -> Self {
+        self.set_server_from_channel().await;
+        let _ = self.are_we_a_member().await;
+        self
+    }
+
     /// Calculate the user permission value
     pub async fn calc_user(mut self) -> DatabasePermissionQuery<'a> {
         if self.cached_user_permission.is_some() {

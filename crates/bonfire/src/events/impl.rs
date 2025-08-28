@@ -23,11 +23,8 @@ impl Cache {
                 let server = self.servers.get(server);
                 let mut query =
                     DatabasePermissionQuery::new(db, self.users.get(&self.user_id).unwrap())
-                        .channel(channel);
+                        .channel(channel).hydrate().await;
                 // let mut perms = perms(self.users.get(&self.user_id).unwrap()).channel(channel);
-
-                query.set_server_from_channel().await;
-                let _ = query.are_we_a_member().await;
 
                 if let Some(member) = member {
                     query = query.member(member);

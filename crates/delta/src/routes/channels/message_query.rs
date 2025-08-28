@@ -31,11 +31,7 @@ pub async fn query(
 
     let channel = target.as_channel(db).await?;
 
-    let mut query = DatabasePermissionQuery::new(db, &user).channel(&channel);
-
-    query.set_server_from_channel().await;
-    let _ = query.are_we_a_member().await;
-
+    let mut query = DatabasePermissionQuery::new(db, &user).channel(&channel).hydrate().await;
     calculate_channel_permissions(&mut query)
         .await
         .throw_if_lacking_channel_permission(ChannelPermission::ReadMessageHistory)?;
