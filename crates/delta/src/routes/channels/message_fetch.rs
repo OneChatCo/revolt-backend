@@ -19,7 +19,7 @@ pub async fn fetch(
     msg: Reference<'_>,
 ) -> Result<Json<v0::Message>> {
     let channel = target.as_channel(db).await?;
-    let mut query = DatabasePermissionQuery::new(db, &user).channel(&channel).hydrate().await;
+    let mut query = DatabasePermissionQuery::new(db, &user).channel(&channel);
     calculate_channel_permissions(&mut query)
         .await
         .throw_if_lacking_channel_permission(ChannelPermission::ViewChannel)?;
