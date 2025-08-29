@@ -29,29 +29,11 @@ pub async fn set_role_permissions(
 
     if let Some(server) = query.server_ref() {
         if let Some(role) = server.roles.get(&role_id) {
-            // === NEW: allow a bot to edit its *own* role at equal rank ===
-            let our_rank = query.get_member_rank().unwrap_or(i64::MAX); // fail-closed if unknown
-            let is_bot = user.bot.is_some();
-            let is_self_role = query
-                .member_ref()
-                .as_ref()
-                .map(|m| m.roles.contains(&role_id))
-                .unwrap_or(false);
-
-            // Block if target role is strictly higher than us,
-            // or equal rank but NOT our own role.
-            if role.rank < our_rank || (role.rank == our_rank && !(is_bot && is_self_role)) {
+            if role.rank <= query.get_member_rank().unwrap_or(i64::MIN) {
                 return Err(create_error!(NotElevated));
             }
 
-            // Use the CHANNEL'S current override as the baseline (more correct than server role)
-            let current_value: Override = match &channel {
-                revolt_database::Channel::TextChannel { role_permissions, .. }
-                | revolt_database::Channel::VoiceChannel { role_permissions, .. } => {
-                    role_permissions.get(&role_id).cloned().unwrap_or_default().into()
-                }
-                _ => role.permissions.into(), // shouldn't happen due to route guard
-            };
+            let current_value: Override = role.permissions.into();
             permissions
                 .throw_permission_override(current_value, &data.permissions)
                 .await?;
